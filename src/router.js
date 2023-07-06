@@ -19,12 +19,6 @@ export default new Router({
           component: () => import(/* webpackChunkName: "main" */ './components/modules/ToolsMain.vue'),
         },
         {
-          path: '/',
-          alias: '/trade',
-          redirect : '/trade2/1',
-          name : "default"
-        },
-        {
           path: '/trade2',
           redirect : '/trade2/1',
         },
