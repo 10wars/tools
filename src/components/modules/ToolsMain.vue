@@ -47,14 +47,20 @@
 			},
 			encrypt(){
 				try{
-					this.encText = jasypt.encrypt(this.plainText);
+
+					this.encText = this.plainText.split(/\r?\n/).map((text)=>{
+						return jasypt.encrypt(text);
+					}).join('\n');
 				} catch(e){
 					this.encText  = "*****";
 				}
 			},
 			decrypt(){
 				try{
-					this.plainText = jasypt.decrypt(this.encText);
+
+					this.plainText = this.encText.split(/\r?\n/).map((text)=>{
+						return jasypt.decrypt(text);
+					}).join('\n');
 				} catch(e){
 					this.plainText  = "*****";
 				}
