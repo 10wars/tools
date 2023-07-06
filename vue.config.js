@@ -21,12 +21,12 @@ module.exports = {
 	},
 	
 	pages : {
-	  'coindcxvue' : {
+	  'tools' : {
 	    entry: './src/main.js',
-	    template: 'public/app-coindcxvue.html',
-	    filename: 'app-coindcxvue.html',
-	    title: 'CoinDCX Dashboard',
-	    chunks: ['chunk-vendors', 'chunk-common', 'coindcxvue']
+	    template: 'public/app-tools.html',
+	    filename: 'app-tools.html',
+	    title: 'Tools Dashboard',
+	    chunks: ['chunk-vendors', 'chunk-common', 'tools']
 	  }
 	}
 

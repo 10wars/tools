@@ -19,7 +19,7 @@ import "@/assets/style.css";
 Vue.use(BootstrapVue);
 Vue.use(IconsPlugin);
 
-console.log("OLD LAOYOIYT")
+console.log("Common LAOYOIYT")
 	export default ({
 		components: {
 		},

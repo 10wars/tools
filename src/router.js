@@ -6,11 +6,18 @@ Vue.use(Router);
 
 export default new Router({
     mode: 'history',
-    base : "coindcxvue",
+    base : "tools",
     scrollBehavior : function() {
         return window.scrollTo({ top: 0, behavior: 'smooth' });
     },
     routes: [
+        {
+          path: '/',
+          alias: '/encoder',
+          name : "Encoder",
+          meta : { layout: "common" },
+          component: () => import(/* webpackChunkName: "main" */ './components/modules/ToolsMain.vue'),
+        },
         {
           path: '/',
           alias: '/trade',
